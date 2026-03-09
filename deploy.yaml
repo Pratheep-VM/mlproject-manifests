@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask-ml-container
-        image: https://hub.docker.com/repository/docker/piratheepv20/my-flask-app/general 
+        image: piratheepv20/my-flask-app:v10
         ports:
         - containerPort: 5000
