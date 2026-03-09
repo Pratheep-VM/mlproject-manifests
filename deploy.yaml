@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-ml-app
+  labels:
+    app: flask-ml-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-ml-app
+  template:
+    metadata:
+      labels:
+        app: flask-ml-app
+    spec:
+      containers:
+      - name: flask-ml-container
+        image: https://hub.docker.com/repository/docker/piratheepv20/my-flask-app/general 
+        ports:
+        - containerPort: 5000
